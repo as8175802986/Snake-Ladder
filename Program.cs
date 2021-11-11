@@ -8,11 +8,11 @@ namespace Snake_Ladder
 {
     class Program
     {
-     
-        //Constants 
+       //Constants 
         public const int NO_PLAY = 0;
         public const int LADDER = 1;
         public const int SNAKE = 2;
+        public const int FINAL = 100;
 
         static void Main(string[] args)
         {
@@ -26,26 +26,34 @@ namespace Snake_Ladder
 
             Random die = new Random();     //creatting random object from random class
             Random options = new Random();
-            int dice = die.Next(1, 7);       //simulating the die throw 
-            Console.WriteLine("The number on this die roll is: "+dice);
-            int opt = options.Next(0, 3);    //simulating the options
 
-            //options use
-            if (opt == NO_PLAY)
+            while (position <= FINAL)
             {
-                Console.WriteLine("No play: Player in same position-- " + position);
-            }
-            else if (opt == LADDER)
-            {
-                position = position + dice;
-                Console.WriteLine("Ladder! new postion-- " + position);
-            }
-            else
-            {
-                position = position - dice;
-                Console.WriteLine("Oops,Snake! new position-- " + position);
-            }
+                int dice = die.Next(1, 7);       //simulating the die throw 
+                Console.WriteLine("The number on this die roll is: " + dice);
+                int opt = options.Next(0, 3);    //simulating the options
 
+                //options use
+                if (opt == NO_PLAY)
+                {
+                    Console.WriteLine("No play: Player in same position-- " + position);
+                }
+                else if (opt == LADDER)
+                {
+                    position = position + dice;
+                    Console.WriteLine("Ladder! new postion-- " + position);
+                }
+                else
+                {
+                    position = position - dice;
+                    Console.WriteLine("Oops,Snake! new position-- " + position);
+                }
+
+                if (position < 0)
+                {
+                    position = 0;
+                }
+            }
             
         }
     }
