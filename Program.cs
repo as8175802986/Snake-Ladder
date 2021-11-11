@@ -8,8 +8,6 @@ namespace Snake_Ladder
 {
     class Program
     {
-      
-        //Constants 
         public const int NO_PLAY = 0;
         public const int LADDER = 1;
         public const int SNAKE = 2;
@@ -47,12 +45,18 @@ namespace Snake_Ladder
                     position = position + dice;
                     if (position > 100)
                     {
-                        //Console.WriteLine("Try Again, throw exceeded 100!");
+
+                        Console.WriteLine("Try Again, throw exceeded 100!");
+
                         position = position - dice;
                     }
                     else
                     {
+                      
+                        Console.WriteLine("Ladder! new postion-- " + position);
+
                        // Console.WriteLine("Ladder! new postion-- " + position);
+
                     }
 
                 }
