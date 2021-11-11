@@ -8,7 +8,7 @@ namespace Snake_Ladder
 {
     class Program
     {
-             //Constants 
+         //Constants 
         //public const int NO_PLAY = 0;
         public const int LADDER = 0;
         public const int SNAKE = 1;
