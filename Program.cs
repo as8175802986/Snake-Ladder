@@ -8,9 +8,7 @@ namespace Snake_Ladder
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            
+      
         //Constants 
         public const int NO_PLAY = 0;
         public const int LADDER = 1;
@@ -73,7 +71,6 @@ namespace Snake_Ladder
             }
             Console.WriteLine();
             Console.WriteLine("The number of times the die is thrown is: " + count);
-        }
         }
     }
 }
